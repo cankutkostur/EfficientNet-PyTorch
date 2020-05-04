@@ -292,7 +292,7 @@ def get_model_params(model_name, override_params):
         raise NotImplementedError('model name is not pre-defined: %s' % model_name)
     if override_params:
         # ValueError will be raised here if override_params has fields not included in global_params.
-        global_params = global_params._replace(**override_params)
+        global_params = override_params
     return blocks_args, global_params
 
 
